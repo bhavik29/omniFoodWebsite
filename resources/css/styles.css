@@ -1,5 +1,7 @@
 /*-------------------------------------------------*/
+
 /* BASIC SETUP */
+
 /*-------------------------------------------------*/
 
 * {
@@ -16,7 +18,10 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-.clearfix {zoom: 1;}
+.clearfix {
+    zoom: 1;
+}
+
 .clearfix:after {
     content: '.';
     clear: both;
@@ -26,7 +31,9 @@ html {
 }
 
 /*-------------------------------------------------*/
+
 /* REUSABLE COMPONENTS */
+
 /*-------------------------------------------------*/
 
 .row {
@@ -49,10 +56,7 @@ section {
 
 /* --------HEADINGS--------- */
 
-h1,
-h2,
-h3 { 
-    
+h1, h2, h3 {
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -113,7 +117,6 @@ h2:after {
     color: #e67e22;
     font-size: 120%;
     margin-right: 10px;
-
     /* secrets to align text and icons */
     line-height: 120%;
     vertical-align: middle;
@@ -122,8 +125,7 @@ h2:after {
 
 /* --------LINKS--------- */
 
-a:link,
-a:visited {
+a:link, a:visited {
     color: #e67e22;
     text-decoration: none;
     padding-bottom: 1px;
@@ -131,16 +133,14 @@ a:visited {
     transition: border-bottom 0.2s, color 0.2s;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
     color: rgb(53, 52, 52);
     border-bottom: transparent;
 }
 
 /* --------BUTTONS--------- */
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited, input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -150,37 +150,33 @@ a:active {
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
-.btn-full:link,
-.btn-full:visited {
+.btn-full:link, .btn-full:visited, input[type=submit] {
     background-color: #e67e22;
     border: 1px solid #e67e22;
     color: #fff;
-    margin: 15px;
 }
 
-.btn-ghost:link,
-.btn-ghost:visited {
+.btn-ghost:link, .btn-ghost:visited {
     border: 1px solid #e67e22;
 }
 
-.btn:hover,
-.btn:active {
+.btn:hover, .btn:active, input[type=submit]:hover, input[type=submit]:active {
     background-color: #bf6516
 }
 
-.btn-full:hover,
-.btn-full:active {
+.btn-full:hover, .btn-full:active {
     border: 1px solid #bf6516;
 }
 
-.btn-ghost:hover,
-.btn-ghost:active {
+.btn-ghost:hover, .btn-ghost:active {
     border: 1px solid #bf6516;
     color: #fff;
 }
 
 /*-------------------------------------------------*/
+
 /* HEADER */
+
 /*-------------------------------------------------*/
 
 header {
@@ -188,6 +184,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -213,11 +210,10 @@ header {
 
 .main-nav li {
     display: inline-block;
-    margin-left: 40px;   
+    margin-left: 40px;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
+.main-nav li a:link, .main-nav li a:visited {
     padding: 8px 0;
     color: #fff;
     text-decoration: none;
@@ -227,13 +223,14 @@ header {
     transition: border-bottom 0.2s;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
+.main-nav li a:hover, .main-nav li a:active {
     border-bottom: 2px solid #bf6516;
 }
 
 /*-------------------------------------------------*/
+
 /* FEATURES */
+
 /*-------------------------------------------------*/
 
 .section-features .long-copy {
@@ -241,10 +238,12 @@ header {
 }
 
 /*-------------------------------------------------*/
+
 /* MEALS */
+
 /*-------------------------------------------------*/
 
-.section-meals{
+.section-meals {
     padding: 0;
 }
 
@@ -280,7 +279,9 @@ header {
 }
 
 /*-------------------------------------------------*/
+
 /* HOW IT WORKS */
+
 /*-------------------------------------------------*/
 
 .section-steps {
@@ -324,8 +325,7 @@ header {
     margin-right: 25px;
 }
 
-.btn-app:link,
-.btn-app:visited {
+.btn-app:link, .btn-app:visited {
     border: 0;
 }
 
@@ -336,15 +336,200 @@ header {
 }
 
 /*-------------------------------------------------*/
+
 /* CITIES */
+
 /*-------------------------------------------------*/
 
 .box img {
-    height: 150px;
+    height: auto;
     width: 100%;
     margin-bottom: 15px;
 }
 
 .city-feature {
     margin-bottom: 5px;
+}
+
+/*-------------------------------------------------*/
+
+/* TESTIMONIALS */
+
+/*-------------------------------------------------*/
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.800), rgba(0, 0, 0, 0.800)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -3px;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 5%;
+    vertical-align: middle;
+}
+
+/*-------------------------------------------------*/
+
+/* SIGN UP */
+
+/*-------------------------------------------------*/
+
+.section-plans {
+    background-color: rgb(240, 239, 239)
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px rgb(196, 193, 193);
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.plan-box div:first-child {
+    background-color: rgb(229, 226, 226);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #bf6516;
+}
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+/*-------------------------------------------------*/
+
+/* CONTACT FORM */
+
+/*-------------------------------------------------*/
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text], input[type=email], text, textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid rgb(165, 160, 160);
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+/*-------------------------------------------------*/
+
+/* FOOTER */
+
+/*-------------------------------------------------*/
+
+footer {
+    background-color: rgb(51, 51, 51);
+    padding: 50px;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li, .social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child, .social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link, .footer-nav li a:visited, .social-links li a:link, .social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: rgb(155, 154, 154);
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover, .footer-nav li a:active {
+    color: rgb(243, 235, 235);
+}
+
+.social-links li a:link, .social-links li a:visited {
+    font-size: 100%;
+}
+
+footer p {
+    color: rgb(155, 154, 154);
+    text-align: center;
+    font-size: 90%;
+    margin-top: 30px;
 }
